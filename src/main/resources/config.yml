@@ -1,0 +1,98 @@
+#
+# Variables: STREAM, BROADCAST, IP_BAN, BAN, KICK, WORSEN_TRUST_FACTOR, IMPROVE_TRUST_FACTOR
+#
+vl-reducer:
+  constant-timer: 10 # seconds
+  time-since-last: 16 # seconds
+gui-heads:
+  inv-refresh-freq: 2 # seconds
+  stats-sync-freq: 120 # seconds
+  sys-info: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzkzZGFmZGRlNjcxNWI4MmRmYWJiODg4ZDE4ZDNhN2NmNGM0NGVjNzdjMGM0NDA3OTVhODJjMmQxZDlmZGJhIn19fQ=="
+  statistics: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmUyY2M0MjAxNWU2Njc4ZjhmZDQ5Y2NjMDFmYmY3ODdmMWJhMmMzMmJjZjU1OWEwMTUzMzJmYzVkYjUwIn19fQ=="
+  checks:
+    list: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2U0ZWNjYjE3YThlOTI2MDFhNTE5MTdjYjVhNmZjMTdlYWYyYWRjMjdlODM3MzIzNmIyMzIzZjQ3NGVmNDhmMSJ9fX0="
+    enabled: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTNhMzk5ODVmYWFkMTVjYWI5Y2E5MDk3Y2VkZWUzZjYxZmYxZjJlOWJmYjYzMTE1ZTkwODg2MWY4OTkwMzQwIn19fQ=="
+    disabled: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InV  ybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmJkMmY5MzQ3NmFiNjlmYWY1YTUxOWViNTgzMmRiODQxYzg1MjY2ZTAwMWRlNWIyNmU0MjdmNDFkOThlNWM3ZSJ9fX0="
+patches:
+  rs-movement: false
+  flight-lag: false
+detections:
+  autoclicker:
+    enabled: true
+    editable: false
+    vls:
+      1:
+        - "STREAM"
+      2:
+        - "STREAM"
+      3:
+        - "STREAM"
+      4:
+        - "STREAM"
+      5:
+        - "STREAM"
+      6:
+        - "STREAM"
+      7:
+        - "STREAM"
+      8:
+        - "STREAM"
+      9:
+        - "STREAM"
+      10:
+        - "STREAM"
+      11:
+        - "STREAM"
+      12:
+        - "STREAM"
+      13:
+        - "STREAM"
+      14:
+        - "STREAM"
+      15:
+        - "STREAM"
+        - "WORSEN_TRUST_FACTOR"
+        - "BROADCAST &b{player} &7e' stato &bbannato &7per &bCheating."
+        - "TELEGRAM_NOTIFY {player} bannato per AutoClicker (id :{id})"
+        - "IP_BAN -s {player} 10d Cheating &7- {id}"
+  crasher:
+    enabled: true
+    editable: true
+    vls:
+      1:
+        - "STREAM"
+        - "WORSEN_TRUST_FACTOR"
+        - "BROADCAST &b{player} &7e' stato &bbannato &7per &bCheating."
+        - "TELEGRAM_NOTIFY {player} bannato per Crasher (id :{id})"
+        - "IP_BAN -s {player} 10d Cheating &7- {id}"
+  bugabuse:
+    enabled: true
+    editable: true
+    vls:
+      1:
+        - "STREAM"
+      2:
+        - "STREAM"
+      3:
+        - "STREAM"
+      4:
+        - "STREAM"
+      5:
+        - "STREAM"
+      6:
+        - "STREAM"
+      7:
+        - "STREAM"
+        - "BROADCAST &b{player} &7e' stato &bbannato &7per &bBug-Abusing."
+        - "TELEGRAM_NOTIFY {player} bannato per BugAbuse (id :{id})"
+        - "BAN -s {player} 1d Bug-Abusing"
+  channelanalyst:
+    enabled: true
+    editable: true
+    vls:
+      1:
+        - "STREAM"
+        - "WORSEN_TRUST_FACTOR"
+        - "BROADCAST &b{player} &7e' stato &bbannato &7per &bCheating."
+        - "TELEGRAM_NOTIFY {player} bannato per ChannelAnalyst (id :{id})"
+        - "IP_BAN -s {player} 10d Cheating &7- {id}"

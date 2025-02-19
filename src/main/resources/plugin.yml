@@ -1,0 +1,9 @@
+name: Astrea
+version: ${project.version}
+author: Sorridi
+main: net.herospvp.astrea.Astrea
+depend:
+  - heros-core
+  - ProtocolLib
+commands:
+  astrea:
